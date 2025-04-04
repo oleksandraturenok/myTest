@@ -1,0 +1,101 @@
+/* Скидаємо відступи і паддінги для body та html */
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%; /* Заміна height на min-height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Вирівнювання по верхньому краю */
+}
+
+/* Основний стиль для сторінки */
+.page {
+    background-color: #fbe3f1; /* Світлий рожевий фон */
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    flex-grow: 1; /* Дозволяє сторінці розтягуватися */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Вирівнювання по верхньому краю */
+    overflow-y: auto; /* Додаємо прокручування */
+}
+
+/* Контейнер для завдання */
+.task-container {
+    background-color: #fff1f7; /* Дуже світлий рожевий фон */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto; /* Центруємо контейнер на сторінці */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Заголовок завдання */
+.task-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff66b2; /* Трохи темніший рожевий */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Стиль для форм */
+.input-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 16px;
+    color: #ff66b2; /* Трохи темніший рожевий */
+    margin-bottom: 5px;
+}
+
+ion-input {
+    padding: 12px;
+    border: 1px solid #ff66b2; /* Рожевий колір */
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #caedec; /* Білий фон */
+}
+
+ion-input::placeholder {
+    color: #ff99cc; /* Світло-рожевий для підказок */
+}
+
+/* Стиль для результатів */
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff; /* Білий фон */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+h3, h4 {
+    color: #ff66b2; /* Рожевий */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #ffccf2; /* Світло-рожевий для кожного елементу */
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: #ff3399; /* Яскраво-рожевий */
+}
+
+/* Стиль для повідомлення, якщо немає результатів */
+.result p {
+    color: #ff6699; /* М'який рожевий колір для повідомлення */
+    font-style: italic;
+    text-align: center;
+    font-size: 16px;
+}

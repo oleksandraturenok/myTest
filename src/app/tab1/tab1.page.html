@@ -1,17 +1,27 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<div class="task-container">
+  <h2 class="task-title">Завдання 1: Обчислення на основі трьох чисел</h2>
+  <p class="task-description">
+    Задано три числа. Якщо хоча б одне з них більше 10, то знайти суму цих чисел.
+    В іншому випадку – добуток, якщо перші цифри чисел непарні.
+  </p>
+  
+  <div class="input-form">
+    <label for="num1">Число 1:</label>
+    <ion-input id="num1" type="number" [(ngModel)]="num1"></ion-input>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+    <label for="num2">Число 2:</label>
+    <ion-input id="num2" type="number" [(ngModel)]="num2"></ion-input>
+
+    <label for="num3">Число 3:</label>
+    <ion-input id="num3" type="number" [(ngModel)]="num3"></ion-input>
+
+    <ion-button (click)="calculate()">Обчислити</ion-button>
+  </div>
+
+  <div class="result">
+    <h3>Результат:</h3>
+    <p>{{ result }}</p>
+  </div>
+</div>

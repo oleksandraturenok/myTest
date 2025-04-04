@@ -1,17 +1,28 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<div class="page">
+  <div class="task-container">
+    <h2 class="task-title">Завдання 2: Сума чисел, кратних 8 і з парною першою цифрою</h2>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
-</ion-content>
+    <div class="input-form">
+      <label for="a">Початкове значення (a):</label>
+      <ion-input type="number" [(ngModel)]="a" (ngModelChange)="calculateNumbers()" placeholder="Введіть початкове значення a"></ion-input>
+
+      <label for="b">Кінцеве значення (b):</label>
+      <ion-input type="number" [(ngModel)]="b" (ngModelChange)="calculateNumbers()" placeholder="Введіть кінцеве значення b"></ion-input>
+    </div>
+
+    <div *ngIf="numbers.length > 0" class="result">
+      <h3>Числа, які кратні 8 і мають парну першу цифру:</h3>
+      <ul>
+        <li *ngFor="let num of numbers">{{ num }}</li>
+      </ul>
+
+      <h4>Сума цих чисел: {{ sum }}</h4>
+    </div>
+
+    <div *ngIf="numbers.length === 0" class="result">
+      <p>Немає чисел, які відповідають умовам.</p>
+    </div>
+  </div>
+</div>

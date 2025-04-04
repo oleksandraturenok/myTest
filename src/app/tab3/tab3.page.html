@@ -1,17 +1,25 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="task-description">
+    <p>Завдання 3: генерувати матрицю розміром NxN. Знайдіть суму всіх елементів, які розташовані на парних рядках. Виокреміть ці рядки кольором, якщо сума елементів більше 100.</p>
+  </div>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <form (ngSubmit)="generateMatrix()">
+    <ion-item>
+      <ion-label>Enter N (Matrix size):</ion-label>
+      <ion-input [(ngModel)]="matrixSize" name="matrixSize" type="number"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" type="submit">Generate Matrix</ion-button>
+  </form>
+
+  <div *ngIf="matrix.length > 0" class="generated-matrix">
+    <p>Generated Matrix:</p>
+    <div *ngFor="let row of matrix; let i = index" [ngClass]="{'highlight': sum > 100 && i % 2 === 0}">
+      {{ row.join(' ') }}
+    </div>
+    <p *ngIf="sum > 100">Sum of even rows: {{ sum }} (Sum is greater than 100)</p>
+    <p *ngIf="sum <= 100">Sum of even rows: {{ sum }}</p>
+  </div>
 </ion-content>

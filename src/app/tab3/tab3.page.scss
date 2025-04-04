@@ -1,0 +1,104 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Основний стиль для сторінки */
+ion-content {
+    background-color: #fbe3f1; 
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+}
+
+/* Стиль для опису завдання */
+.task-description {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #ff66b2; 
+    text-align: center;
+}
+
+/* Стиль для форми введення */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+ion-label {
+    font-size: 16px;
+    color: #ff66b2; 
+}
+
+ion-input {
+    padding: 12px;
+    border: 1px solid #ff66b2; 
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #ff3399; 
+}
+
+ion-input::placeholder {
+    color: #ff99cc;
+}
+
+ion-button {
+    background-color: #ff66b2; 
+    color: white; 
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+/* Стиль для згенерованої матриці */
+.generated-matrix {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.generated-matrix p {
+    font-size: 18px;
+    color: #ff66b2; 
+    margin-bottom: 10px;
+}
+
+/* Стиль для кожного рядка матриці */
+.generated-matrix div {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Виділення парних рядків, якщо сума більше 100 */
+.highlight {
+    background-color: #ffccf2; 
+    color: #ff3399;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Стиль для повідомлення про суму */
+p {
+    font-size: 16px;
+    color: #ff3399; 
+    font-weight: 500;
+}
+
+p * {
+    margin-top: 10px;
+    color: #ff66b2;
+}

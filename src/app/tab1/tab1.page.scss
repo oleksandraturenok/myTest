@@ -1,0 +1,83 @@
+/*  фон і відступи для сторінки */
+.page {
+    padding: 16px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto; 
+  }
+  
+  /*  для заголовка та завдання */
+  .task-container {
+    padding: 20px;
+    background-color: #f5d3ffce;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .task-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #b74bfa; 
+    margin-bottom: 10px;
+  }
+  
+  .task-description {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+ 
+  .input-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  ion-item {
+    margin-bottom: 10px;
+  }
+  
+  ion-input {
+    --background: #b8e2f0;  
+    --color: #333;  
+    --border-color: #6a1b9a;  
+  }
+  
+  ion-button {
+    background-color: #6a1b9a; 
+    color: rgb(255, 255, 255);
+  }
+  
+  .result {
+    padding: 20px;
+    background-color: #e1bee7; 
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .result h3 {
+    font-size: 1.2em;
+    color: #6a1b9a;
+  }
+  
+  .result p {
+    font-size: 1.1em;
+    color: #333;
+  }
+  
+  input {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #6a1b9a;
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #6a1b9a;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
